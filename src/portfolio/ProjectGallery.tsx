@@ -31,7 +31,7 @@ export function ProjectGallery({ open, onClose, title, images }: Props) {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
-          className="fixed inset-0 z-[100] bg-background/80 backdrop-blur-xl overflow-y-auto"
+          className="fixed inset-0 z-100 bg-background/80 backdrop-blur-xl overflow-y-auto"
           onClick={onClose}
         >
           <div
@@ -46,7 +46,7 @@ export function ProjectGallery({ open, onClose, title, images }: Props) {
               <button
                 onClick={onClose}
                 aria-label="Close gallery"
-                className="glass rounded-full h-11 w-11 inline-flex items-center justify-center hover:bg-white/[0.1] transition-colors"
+                className="glass rounded-full h-11 w-11 inline-flex items-center justify-center hover:bg-white/10 transition-colors"
               >
                 <X className="h-5 w-5" />
               </button>
@@ -67,7 +67,7 @@ export function ProjectGallery({ open, onClose, title, images }: Props) {
                     src={src}
                     alt={`${title} mockup ${i + 1}`}
                     loading="lazy"
-                    className="w-full h-full object-cover aspect-[4/3]"
+                    className="w-full h-full object-cover aspect-4/3"
                   />
                 </motion.div>
               ))}

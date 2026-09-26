@@ -204,7 +204,7 @@ export function Work() {
               );
 
               const className =
-                "group block w-full text-left glass rounded-3xl p-7 md:p-8 hover:bg-white/[0.06] transition-all relative overflow-hidden";
+                "group block w-full text-left glass rounded-3xl p-7 md:p-8 hover:bg-white/6 transition-all relative overflow-hidden";
               const transition = { delay: i * 0.06, duration: 0.5, ease: [0.22, 1, 0.36, 1] as const };
 
               if (isUiux) {

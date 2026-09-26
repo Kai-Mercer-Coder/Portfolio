@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useRef } from "react";
 
 /**
@@ -8,6 +9,7 @@ import { useEffect, useRef } from "react";
 export function AmbientAudio({ videoId = "B8dmYboHhmA" }: { videoId?: string }) {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const playerRef = useRef<any>(null);
+
   const startedRef = useRef(false);
 
   useEffect(() => {
@@ -22,7 +24,7 @@ export function AmbientAudio({ videoId = "B8dmYboHhmA" }: { videoId?: string }) 
     const init = () => {
       const w = window as any;
       if (!w.YT || !w.YT.Player || !containerRef.current || playerRef.current) return;
-      playerRef.current = new w.YT.Player(containerRef.current, {
+      playerRef.current  = new w.YT.Player(containerRef.current, {
         videoId,
         playerVars: {
           autoplay: 1,
@@ -38,6 +40,7 @@ export function AmbientAudio({ videoId = "B8dmYboHhmA" }: { videoId?: string }) 
             e.target.setVolume(4);
             e.target.playVideo();
           },
+
           onStateChange: (e: any) => {
             // Loop fallback
             if (e.data === 0) e.target.playVideo();
@@ -45,6 +48,7 @@ export function AmbientAudio({ videoId = "B8dmYboHhmA" }: { videoId?: string }) 
         },
       });
     };
+
 
     const w = window as any;
     if (w.YT && w.YT.Player) {
@@ -62,6 +66,7 @@ export function AmbientAudio({ videoId = "B8dmYboHhmA" }: { videoId?: string }) 
       if (startedRef.current) return;
       startedRef.current = true;
       try {
+        
         playerRef.current?.setVolume?.(4);
         playerRef.current?.playVideo?.();
       } catch {

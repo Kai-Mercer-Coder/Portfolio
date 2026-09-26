@@ -11,6 +11,7 @@ import {
   SiHtml5,
   SiCss,
   SiFigma,
+  SiPostgresql
 } from "react-icons/si";
 
 type Tech = {
@@ -31,6 +32,7 @@ const stack: Tech[] = [
   { name: "Figma", icon: SiFigma, level: "Expert", description: "Interface design & prototyping." },
   { name: "HTML5", icon: SiHtml5, level: "Mastery", description: "Semantic markup foundation." },
   { name: "CSS", icon: SiCss, level: "Mastery", description: "A designing style sheet." },
+  { name: "PostgreSQL", icon: SiPostgresql, level: "Strong", description: "Database development and management." },
 ];
 
 export function Stack() {
@@ -66,7 +68,7 @@ export function Stack() {
               transition={{ delay: i * 0.05, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
               whileHover={{ y: -6 }}
               transition-hover={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              className="group glass rounded-2xl p-6 relative overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:bg-white/[0.05] hover:border-white/20"
+              className="group glass rounded-2xl p-6 relative overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:bg-white/5 hover:border-white/20"
             >
               <div
                 aria-hidden

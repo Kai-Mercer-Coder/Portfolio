@@ -13,6 +13,7 @@ export function CustomCursor() {
     const coarse = window.matchMedia("(pointer: coarse)").matches;
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (coarse || reduced) return;
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setEnabled(true);
 
     const mouse = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
@@ -86,7 +87,7 @@ export function CustomCursor() {
   if (!enabled) return null;
 
   return (
-    <div className="pointer-events-none fixed inset-0 z-[100]" aria-hidden>
+    <div className="pointer-events-none fixed inset-0 z-100" aria-hidden>
       <div
         ref={ringRef}
         className="absolute top-0 left-0 h-8 w-8 rounded-full cursor-ring-spin"

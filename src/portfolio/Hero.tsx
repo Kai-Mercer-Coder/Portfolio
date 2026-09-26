@@ -7,11 +7,11 @@ export function Hero() {
       {/* Ambient background */}
       <div
         aria-hidden
-        className="absolute inset-0 grid-bg [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_75%)]"
+        className="absolute inset-0 grid-bg mask-[radial-gradient(ellipse_at_center,black_30%,transparent_75%)]"
       />
       <div
         aria-hidden
-        className="absolute top-0 left-1/2 -translate-x-1/2 h-[600px] w-[900px] rounded-full"
+        className="absolute top-0 left-1/2 -translate-x-1/2 h-150 w-225 rounded-full"
         style={{ background: "var(--gradient-radial)" }}
       />
       {/* Floating orbs */}
@@ -19,13 +19,13 @@ export function Hero() {
         aria-hidden
         animate={{ x: [0, 40, 0], y: [0, -30, 0] }}
         transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-1/4 left-[10%] h-72 w-72 rounded-full bg-white/[0.04] blur-3xl"
+        className="absolute top-1/4 left-[10%] h-72 w-72 rounded-full bg-white/4 blur-3xl"
       />
       <motion.div
         aria-hidden
         animate={{ x: [0, -30, 0], y: [0, 40, 0] }}
         transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute bottom-1/4 right-[10%] h-80 w-80 rounded-full bg-white/[0.03] blur-3xl"
+        className="absolute bottom-1/4 right-[10%] h-80 w-80 rounded-full bg-white/3 blur-3xl"
       />
 
       <div className="relative mx-auto w-full max-w-6xl px-6">
@@ -91,7 +91,7 @@ export function Hero() {
           </a>
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 rounded-full glass px-5 py-3 text-sm font-medium hover:bg-white/[0.08] transition-colors"
+            className="inline-flex items-center gap-2 rounded-full glass px-5 py-3 text-sm font-medium hover:bg-white/8 transition-colors"
           >
             <Sparkles className="h-4 w-4" />
             Start a project
@@ -99,7 +99,7 @@ export function Hero() {
           <a
             href="/kai-mercer-cv.pdf"
             download
-            className="group inline-flex items-center gap-2 rounded-full glass px-5 py-3 text-sm font-medium hover:bg-white/[0.08] transition-colors"
+            className="group inline-flex items-center gap-2 rounded-full glass px-5 py-3 text-sm font-medium hover:bg-white/8 transition-colors"
           >
             <Download className="h-4 w-4 transition-transform group-hover:translate-y-0.5" />
             Download CV

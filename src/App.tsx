@@ -1,4 +1,4 @@
-import { useState } from 'react'
+
 import { Navbar } from "../src/portfolio/Navbar";
 import { Hero } from "../src/portfolio/Hero";
 import { Work } from "../src/portfolio/Work";
